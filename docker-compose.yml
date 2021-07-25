@@ -4,8 +4,8 @@ services:
     image: shivpatel/bitwarden_rs_dropbox_backup:latest
     restart: always
     volumes:
-      - ./bwdata:/data 
+      - ./../data:/data 
       - ./config:/config
     environment:
       - BACKUP_ENCRYPTION_KEY=xxx
-      #- DELETE_AFTER=10
+      - DELETE_AFTER=30
