@@ -1,10 +1,10 @@
-version: '3.2'
+version: "3.2"
 services:
   bitwarden_dropbox_backup:
     image: shivpatel/bitwarden_rs_dropbox_backup:latest
     restart: always
     volumes:
-      - ./../data:/data 
+      - ./../vwdata:/data
       - ./config:/config
     environment:
       - BACKUP_ENCRYPTION_KEY=xxx
